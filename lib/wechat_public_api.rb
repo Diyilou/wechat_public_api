@@ -2,6 +2,7 @@ require "wechat_public_api/version"
 require "wechat_public_api/menu"
 require "wechat_public_api/kf_message"
 require "wechat_public_api/templet_message"
+require "wechat_public_api/access_token"
 
 module WechatPublicApi
   class << self
