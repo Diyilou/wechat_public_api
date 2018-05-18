@@ -41,6 +41,7 @@ module WechatPublicApi
       end
 
       ###
+      # 获取永久二维码
       # @param <int> sceneid -- 场景值ID，临时二维码时为32位非0整型，永久二维码时最大值为100000（目前参数只支持1--100000）
       # @return <string> url -- 二维码网址
       #

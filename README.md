@@ -68,6 +68,19 @@ WechatPublicApi.access_token_cache = true
 	* 删除模板：`WechatPublicApi::Tp.delete(templet_id)`
 	* 发送普通模板消息（不跳转小程序）`WechatPublicApi::Tp.general_message(openid, templet_id, url, data)`
 	* 发送跳转小程序的模板消息：`WechatPublicApi::Tp.miniprogram_message(openid, templet_id, url, appid, pagepath, data)`
+* 用户管理
+  * 获取用户基本信息: `WechatPublicApi::User.get_userinfo(openid)`
+* 帐号管理
+  * 获取临时带参二维码: `WechatPublicApi::Account.qrscene(sceneid)`
+  * 获取永久带参二维码: `WechatPublicApi::Account.qrsrtscene(sceneid)`
+  * 保存带参二维码到本地： `WechatPublicApi::Account.save_qrcode(path, *filename)`
+  * 生成短链接：`WechatPublicApi::Account.shorturl(longurl)`
+* 素材管理
+  * 获得临时图片素材的 media_id： `WechatPublicApi::Material.upload_image_media(file_path)`
+  * 获得永久图片素材的 media_id： `WechatPublicApi::Material.upload_image_material(file_path)`
+* 消息加密解密
+  * 加密： `WechatPublicApi::Aes.encrypt(aes_key, text, app_id)`
+  * 解密： `WechatPublicApi::Aes.decrypt(key, dicrypted_string)`
 
 ### 菜单栏操作API
 
@@ -172,3 +185,5 @@ end
 **注意：** 菜单栏创建和查询的方法包含了查询access_token
 
 ### 客服消息管理API
+
+待更新... 可参考源代码，注释比较详细
