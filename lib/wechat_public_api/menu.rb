@@ -17,7 +17,7 @@ module WechatPublicApi
       #
       # =>  post_data example
       # {
-      #	  "button": [
+      # 	  "button": [
       #     {
       #  		 "type": "view",
       #  		 "name": "",
