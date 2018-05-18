@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["张明鑫"]
   spec.email         = ["mnzmx_z@163.com"]
 
-  spec.summary       = %q{微信公众号开发API，包含对微信公众号菜单栏、客服消息、模板消息、帐号管理等接口的封装}
+  spec.summary       = %q{微信公众号开发API，包含对微信公众号菜单栏、客服消息、模板消息、帐号管理等接口的封装，API长期更新维护，建议使用最新版本，个人微信：zmx119966，加我请备注gem，欢迎交流。}
   spec.description   = %q{}
   spec.homepage      = "https://github.com/Diyilou/wechat_public_api.git"
   spec.license       = "MIT"
