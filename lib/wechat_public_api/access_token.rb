@@ -21,10 +21,9 @@ module WechatPublicApi
         unless access_token_cache
           response = HTTParty.get("https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=#{appid}&secret=#{secret}").body
           response_body = (JSON.parse response)
-          
-          unless response_body['access_token']
-            return response_body
-          end
+
+          # 抛出异常
+          throw response_body['errmsg']  unless response_body['access_token']
 
           return response_body['access_token']
         end
@@ -35,9 +34,8 @@ module WechatPublicApi
           response = HTTParty.get("https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=#{appid}&secret=#{secret}").body
           response_body = (JSON.parse response)
 
-          unless response_body['access_token']
-            return response_body
-          end
+          # 抛出异常
+          throw response_body['errmsg']  unless response_body['access_token']
 
           _cached_access_token = response_body['access_token']
           $redis.set _cache_key, _cached_access_token, ex: 2.minutes

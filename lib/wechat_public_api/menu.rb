@@ -41,9 +41,9 @@ module WechatPublicApi
       def create(post_data)
         # request access_token
         access_token = AccessToken.get()
+        post_data = post_data.to_json.gsub(/\\u([0-9a-z]{4})/) {|s| [$1.to_i(16)].pack("U")}
 
         uri = URI.parse("https://api.weixin.qq.com/cgi-bin/menu/create?access_token=#{access_token}")
-        post_data = post_data
         http = Net::HTTP.new(uri.host, uri.port)
         http.use_ssl = true
         http.verify_mode = OpenSSL::SSL::VERIFY_NONE
@@ -58,7 +58,7 @@ module WechatPublicApi
       def query()
         # request access_token
         access_token = AccessToken.get()
-        response = HTTParty.get("https://api.weixin.qq.com/cgi-bin/menu/get?access_token=ACCESS_TOKEN=#{access_token}").body
+        response = HTTParty.get("https://api.weixin.qq.com/cgi-bin/menu/get?access_token=#{access_token}").body
         (JSON.parse response)
       end
 
@@ -69,7 +69,7 @@ module WechatPublicApi
       def delete()
         # request access_token
         access_token = AccessToken.get()
-        response = HTTParty.get("https://api.weixin.qq.com/cgi-bin/menu/delete?access_token=ACCESS_TOKEN=#{access_token}").body
+        response = HTTParty.get("https://api.weixin.qq.com/cgi-bin/menu/delete?access_token=#{access_token}").body
         (JSON.parse response)
       end
     end

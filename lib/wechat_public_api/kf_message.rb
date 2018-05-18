@@ -29,7 +29,7 @@ module WechatPublicApi
       #
       # @param <JSON> message
       #
-      def self.post_customer_message(message)
+      def post_customer_message(message)
         # get access_token
         access_token = AccessToken.get()
 
@@ -49,7 +49,7 @@ module WechatPublicApi
       # @param <string> content -- 需要发送的客服消息内容
       #
       # 发送文字消息
-      def self.text_message(openid, content)
+      def text_message(openid, content)
 
         custom_message = {
           touser: openid,
@@ -68,7 +68,7 @@ module WechatPublicApi
       # @param <string> media_id  -- 发送的图片/语音/视频/图文消息（点击跳转到图文消息页）的媒体ID
       #
       # 发送图片消息
-      def self.image_message(openid, media_id)
+      def image_message(openid, media_id)
 
         custom_message = {
           touser: openid,
@@ -116,7 +116,7 @@ module WechatPublicApi
       # ]
       #
       # 发送图文消息（点击跳转到外链）
-      def self.news_message(openid, articles)
+      def news_message(openid, articles)
         custom_message = {
             touser: openid,
             msgtype: 'news',
@@ -132,7 +132,7 @@ module WechatPublicApi
       end
 
       # 发送语音消息
-      def self.voice_message(openid, media_id)
+      def voice_message(openid, media_id)
 
         custom_message = {
             touser: openid,

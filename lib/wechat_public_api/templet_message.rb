@@ -8,7 +8,7 @@
 require "wechat_public_api/access_token"
 
 module WechatPublicApi
-  module TP
+  module Tp
     class << self
 
       ###

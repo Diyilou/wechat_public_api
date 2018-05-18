@@ -141,7 +141,7 @@ status = WechatPublicApi::Menu.delete()
 菜单栏操作API主要包含以上三个方法，接下来看一个完整示例：
 
 ```ruby
-# 创建菜单栏 -> 查询菜单栏裂变
+# 创建菜单栏 -> 查询菜单栏列表
 # 初始化配置
 WechatPublicApi.app_id = 'wx440415e4c3b4b8f9'
 WechatPublicApi.app_secret = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
