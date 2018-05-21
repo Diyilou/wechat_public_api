@@ -5,11 +5,8 @@
 # Wechat number: zmx119966
 ####################################################
 
-require "wechat_public_api/access_token"
-module WechatPublicApi
+class WechatPublicApi
   module Utils
-    class << self
-      # Todo
-    end
+    # todo
   end
 end

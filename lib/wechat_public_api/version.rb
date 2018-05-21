@@ -1,3 +1,3 @@
-module WechatPublicApi
-  VERSION = "0.1.2"
+class WechatPublicApi
+  VERSION = "0.1.5"
 end
