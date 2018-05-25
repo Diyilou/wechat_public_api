@@ -10,10 +10,9 @@ Gem::Specification.new do |spec|
   spec.email         = ["mnzmx_z@163.com"]
 
   spec.summary       = %q{微信公众号开发API，包含对微信公众号菜单栏、客服消息、模板消息、帐号管理等接口的封装，API长期更新维护，建议使用最新版本.}
-  spec.description   = %q{}
+  spec.description   = %q{微信公众号开发API，包含对微信公众号菜单栏、客服消息、模板消息、帐号管理等接口的封装，API长期更新维护，建议使用最新版本，开发者使用文档：https://yuque.com/qianlansedehei/wechat_public_api}
   spec.homepage      = "https://github.com/Diyilou/wechat_public_api.git"
   spec.license       = "MIT"
-  spec.documentation = "https://yuque.com/qianlansedehei/wechat_public_api"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
