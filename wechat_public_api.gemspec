@@ -13,6 +13,7 @@ Gem::Specification.new do |spec|
   spec.description   = %q{}
   spec.homepage      = "https://github.com/Diyilou/wechat_public_api.git"
   spec.license       = "MIT"
+  spec.documentation = "https://yuque.com/qianlansedehei/wechat_public_api"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.

@@ -20,14 +20,6 @@ gem 'wechat_public_api'
 
     $ gem install wechat_public_api
 
-## 0.1.4 版本文档
+## 文档
 
-[0.1.4 版本文档][1]
-[1]:https://github.com/Diyilou/wechat_public_api/blob/master/doc/0.1.4.md "版本：0.1.4"
-
-## 两行代码获得 access_token
-
-```ruby
-wechat_api = WechatPublicApi.new appid: 'xx', app_secret: 'xx', access_token_cache: true
-access_token = wechat_api.get_access_token
-```
+[wechat_public_api开发者使用文档](https://yuque.com/qianlansedehei/wechat_public_api)
