@@ -15,12 +15,11 @@ class WechatPublicApi
       # get access_token
       access_token = get_access_token()
 
-      @access_token = Wxutils.get_access_token wx_account
-      uri = URI.parse("https://api.weixin.qq.com/cgi-bin/message/template/#{url_params}?access_token=#{@access_token}")
+      uri = URI.parse("https://api.weixin.qq.com/cgi-bin/message/template/#{url_params}?access_token=#{access_token}")
       http = Net::HTTP.new(uri.host, uri.port)
       http.use_ssl = true
       http.verify_mode = OpenSSL::SSL::VERIFY_NONE
-      request = Net::HTTP::Post.new("/cgi-bin/message/template/#{url_params}?access_token=#{@access_token}")
+      request = Net::HTTP::Post.new("/cgi-bin/message/template/#{url_params}?access_token=#{access_token}")
       request.add_field('Content-Type', 'application/json')
       # 部分字符转换为json后  成为unicode编码
       request.body = message.to_json.gsub(/\\u([0-9a-z]{4})/) {|s| [$1.to_i(16)].pack("U")}
